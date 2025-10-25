@@ -1,0 +1,41 @@
+<div class="scrolling-banner">
+  <div class="marquee">
+    <div class="marquee-content">
+      <img *ngFor="let product of products"
+        [src]="product.imageUrl"
+        [alt]="product.title"
+        (click)="openImageDetail(product)" />
+    </div>
+  </div>
+</div>
+
+<!-- Image Detail Modal -->
+<div *ngIf="showDetail" class="image-detail-modal" (click)="closeImageDetail()">
+  <div class="image-detail-content" (click)="$event.stopPropagation()">
+    <h3>{{selectedProduct.title}}</h3>
+    <img [src]="selectedProduct.imageUrl" [alt]="selectedProduct.title"
+         style="max-width:100%;max-height:60vh;" />
+    <p><strong>Price:</strong> ₹{{selectedProduct.price}}</p>
+    <p>{{selectedProduct.description}}</p>
+    <button (click)="addToCart(selectedProduct)">Add to Cart</button>
+    <br>
+    <button (click)="closeImageDetail()">Close</button>
+  </div>
+</div>
+
+<!-- Banner after scrolling images -->
+<!-- <div class="home-banner">
+  <img src="https://i.pinimg.com/736x/86/40/e1/8640e12746b136de2c03a78d6bda2209.jpg" alt="Home Banner" />
+</div> -->
+<!-- content on top of img -->
+ <div class="home-banner">
+  <img src="https://i.pinimg.com/736x/50/66/f1/5066f1d3e487f3f1def676861f3254a2.jpg" alt="Home Banner" />
+  <div class="banner-text">
+    <h2>About MyShop</h2>
+    <p>Welcome to MyShop, your one-stop destination for the best products across fashion, electronics, and more.</p>
+    <p>Discover amazing deals and enjoy a seamless shopping experience with us!</p>
+    
+  </div>
+</div>
+
+

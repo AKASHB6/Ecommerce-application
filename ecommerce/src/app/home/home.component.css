@@ -1,0 +1,154 @@
+/* Container holding the entire banner */
+.scrolling-banner {
+  overflow: hidden;
+  width: 100%;
+  height: 320px; /* Increased height to fit images nicely */
+  position: relative;
+  background-color: #fff;
+}
+
+/* The scrolling animation container */
+.marquee {
+  display: flex;
+  width: fit-content;
+  animation: marqueeAnimation 40s linear infinite;
+  will-change: transform;
+}
+
+/* Flex container for images */
+.marquee-content {
+  display: flex;
+  gap: 8px; /* Small gap between images */
+  font-size: 0; /* Removes inline spacing */
+  align-items: center;
+}
+
+/* Style for each image */
+.marquee-content img {
+  width: 220px;
+  height: 300px;
+  object-fit: contain;
+  background-color: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.marquee-content img:hover {
+  transform: scale(1.05);
+}
+
+/* Animation keyframes for marquee */
+@keyframes marqueeAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Modal overlay */
+.image-detail-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal content container */
+.image-detail-content {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 90vw;
+  box-shadow: 0 0 20px #2228;
+  text-align: center;
+}
+
+.image-detail-content img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  max-width: 100%;
+  max-height: 60vh;
+}
+
+.image-detail-content p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.image-detail-content button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #ff4081;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.image-detail-content button:hover {
+  background-color: #e03570;
+}
+
+
+/* Banner after scrolling images */
+.home-banner {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+.home-banner img {
+  width: 100%;
+  max-height: 800px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* css for content on top of img */
+.home-banner {
+  position: relative;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.home-banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-text {
+  position: absolute;
+  top: 20px;  /* Adjust vertical position */
+  left: 20px; /* Align left */
+  color: white;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent background for readability */
+  padding: 15px 25px;
+  border-radius: 8px;
+  max-width: 40%;  /* Optional - controls width of text */
+  font-family: Arial, sans-serif;
+}
+
+.banner-text h2 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.banner-text p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+

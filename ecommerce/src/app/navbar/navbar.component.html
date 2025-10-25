@@ -1,0 +1,79 @@
+<nav class="navbar">
+  <ul class="nav-links">
+
+    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+
+    <li class="dropdown">
+      <a routerLink="/men" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Men ▾</a>
+      <ul class="dropdown-content">
+        <li><a routerLink="/men/tshirt" routerLinkActive="active">T-shirt</a></li>
+        <li><a routerLink="/men/shirt" routerLinkActive="active">Shirt</a></li>
+        <li><a routerLink="/men/jeans" routerLinkActive="active">Jeans</a></li>
+        <li><a routerLink="/men/watch" routerLinkActive="active">Watch</a></li>
+        <li><a routerLink="/men/shoe" routerLinkActive="active">Shoe</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a routerLink="/women" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Women ▾</a>
+      <ul class="dropdown-content">
+        <li><a routerLink="/women/dress" routerLinkActive="active">Dresses</a></li>
+        <li><a routerLink="/women/top" routerLinkActive="active">Tops</a></li>
+        <li><a routerLink="/women/jeans" routerLinkActive="active">Jeans</a></li>
+        <li><a routerLink="/women/watch" routerLinkActive="active">Watch</a></li>
+        <li><a routerLink="/women/shoe" routerLinkActive="active">Shoes</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a routerLink="/kids" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Kids ▾</a>
+      <ul class="dropdown-content">
+        <li><a routerLink="/kids/boys" routerLinkActive="active">Boys Clothing</a></li>
+        <li><a routerLink="/kids/girls" routerLinkActive="active">Girls Clothing</a></li>
+        <li><a routerLink="/kids/toys" routerLinkActive="active">Toys</a></li>
+        <li><a routerLink="/kids/shoes" routerLinkActive="active">Shoes</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a routerLink="/electronics" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Electronics ▾</a>
+      <ul class="dropdown-content">
+        <li><a routerLink="/electronics/mobiles" routerLinkActive="active">Mobiles</a></li>
+        <li><a routerLink="/electronics/laptops" routerLinkActive="active">Laptops</a></li>
+        <li><a routerLink="/electronics/cameras" routerLinkActive="active">Cameras</a></li>
+        <li><a routerLink="/electronics/accessories" routerLinkActive="active">Accessories</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a routerLink="/jewellery" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Jewellery ▾</a>
+      <ul class="dropdown-content">
+        <li><a routerLink="/jewellery/necklaces" routerLinkActive="active">Necklaces</a></li>
+        <li><a routerLink="/jewellery/earrings" routerLinkActive="active">Earrings</a></li>
+        <li><a routerLink="/jewellery/rings" routerLinkActive="active">Rings</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a routerLink="/home-kitchen" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home Kitchen ▾</a>
+      <ul class="dropdown-content">
+        <li><a routerLink="/home-kitchen/furniture" routerLinkActive="active">Furniture</a></li>
+        <li><a routerLink="/home-kitchen/kitchenware" routerLinkActive="active">Kitchenware</a></li>
+        <li><a routerLink="/home-kitchen/decor" routerLinkActive="active">Decor</a></li>
+      </ul>
+    </li>
+
+  </ul>
+
+  <div class="navbar-right">
+    <input
+      type="text"
+      placeholder="Search products..."
+      [(ngModel)]="searchTerm"
+      (keyup.enter)="onSearch()"
+    />
+    <a routerLink="/cart" class="cart-icon" title="Cart">
+      🛒 <span class="cart-count">{{ cartItemCount }}</span>
+    </a>
+  </div>
+</nav>

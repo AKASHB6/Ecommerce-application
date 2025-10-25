@@ -1,0 +1,230 @@
+/* ===========================
+   General Reset & Fonts
+============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;  /* Light gray background for app */
+  color: #333;
+}
+
+/* ===========
+   Header
+============= */
+.header {
+  background-color: #d6336c; /* Vibrant pink/magenta */
+  padding: 15px 20px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 3px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 28px;
+}
+
+/* ===========
+   Navbar
+============= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #343a40; /* Dark charcoal */
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  color: #f8f9fa; /* Off-white */
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 10px;
+  display: inline-block;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+  border-radius: 4px;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+  color: #ff6b6b; /* Coral accent */
+  background-color: #495057; /* Slightly lighter dark bg */
+}
+
+/* Dropdown styles */
+.nav-links li.dropdown:hover > a {
+  color: #ff6b6b;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #495057; /* Dark but lighter than navbar */
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  padding: 8px 0;
+  border-radius: 0 0 6px 6px;
+  z-index: 200;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content li a {
+  padding: 10px 20px;
+  color: #f8f9fa;
+  display: block;
+  font-weight: 500;
+}
+
+.dropdown-content li a:hover {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.nav-links li.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Navbar right side: search and cart */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-right input[type="text"] {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 220px;
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar-right input[type="text"]:focus {
+  box-shadow: 0 0 5px #ff6b6b;
+}
+
+.cart-icon {
+  color: #f8f9fa;
+  font-size: 22px;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #ff6b6b;
+  border-radius: 50%;
+  padding: 3px 7px;
+  font-size: 12px;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+/* ===========
+   Product Listings (e.g., Men T-Shirts)
+============= */
+.product-list {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: white;
+  width: 220px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #343a40;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+.product-card strong {
+  font-size: 16px;
+  color: #d6336c;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.product-card button {
+  background-color: #d6336c;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #b02a56;
+}
+
+/* ===========
+   Footer (if you create)
+============= */
+/* You can add footer styling here later */

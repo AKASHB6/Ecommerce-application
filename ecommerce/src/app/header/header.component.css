@@ -1,0 +1,19 @@
+.header {
+  background-color: #ff4081; /* your brand color */
+  padding: 15px 20px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 3px;
+}
